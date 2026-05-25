@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRAINE実験刺激 - 条件選択</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: linear-gradient(135deg, #f5efe6 0%, #ebe3d5 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #2c2c2c;
+}
+
+.container {
+  max-width: 720px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #efefef;
+}
+
+.title-en {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #2D5016;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.title-jp {
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 24px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.info-box {
+  background: #f8f5f0;
+  border-left: 3px solid #2D5016;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  border-radius: 0 6px 6px 0;
+}
+
+.info-box strong {
+  color: #2D5016;
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.condition-card {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  background: white;
+}
+
+.condition-card:hover {
+  border-color: #2D5016;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 80, 22, 0.1);
+}
+
+.condition-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F5EFE6 0%, #ebe3d5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2D5016;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.condition-info {
+  flex: 1;
+}
+
+.condition-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 4px;
+}
+
+.condition-description {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.condition-arrow {
+  font-size: 20px;
+  color: #2D5016;
+  margin-left: 16px;
+}
+
+.footer-note {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #efefef;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 32px 24px; }
+  .title-en { font-size: 26px; }
+  .condition-card { padding: 18px; }
+  .condition-number { width: 40px; height: 40px; font-size: 18px; margin-right: 14px; }
+  .condition-title { font-size: 15px; }
+  .condition-description { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title-en">MIRAINE</div>
+    <div class="title-jp">Re:Wear プロジェクト・実験刺激プロトタイプ</div>
+    <div class="subtitle">
+      Instagram風広告刺激の3条件版<br>
+      下記から表示したい条件を選択してください
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>研究情報：</strong>本ページは卒業論文研究「広告開示条件下での『いいね』数の効果回復に果たす企業志向動機の役割」の実験刺激プロトタイプです。3条件で動機公示の文言と4枚目の画像のみが異なり、それ以外（カルーセル構造、いいね数=15,376件、コメント、投稿時刻、ハッシュタグなど）はすべて統一されています。
+  </div>
+
+  <div class="conditions">
+    <a href="condition_a.html" class="condition-card">
+      <div class="condition-number">A</div>
+      <div class="condition-info">
+        <div class="condition-title">公益のみ条件</div>
+        <div class="condition-description">動機公示なし／純粋な公益的訴求のみ（ベースライン条件）</div>
+      </div>
+      <div class="condition-arrow">→</div>
+    </a>
+
+    <a href="condition_b.html" class="condition-card">
+      <div class="condition-number">B</div>
+      <div class="condition-info">
+        <div class="condition-title">曖昧公言条件</div>
+        <div class="condition-description">企業利益動機への曖昧な言及「事業にとっても意味あるもの」</div>
+      </div>
+      <div class="condition-arrow">→</div>
+    </a>
+
+    <a href="condition_c.html" class="condition-card">
+      <div class="condition-number">C</div>
+      <div class="condition-info">
+        <div class="condition-title">明確公言条件</div>
+        <div class="condition-description">企業利益動機の明確な公言「ブランド価値向上と新規顧客獲得」</div>
+      </div>
+      <div class="condition-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="footer-note">
+    アカウント：@miraine_official（フィクションブランド）<br>
+    いいね数：15,376件（高条件固定）／広告開示：「広告」表示で全条件統一<br>
+    カルーセル：左右スワイプ可・矢印・ドットで操作可能
+  </div>
+</div>
+</body>
+</html>
